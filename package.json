@@ -12,7 +12,7 @@
     "crawler"
   ],
   "author": "",
-  "license": "ISC",
+  "license": "BSD-2-Clause",
   "dependencies": {
     "crawler": "^1.1.2"
   },
