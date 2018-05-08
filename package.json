@@ -1,0 +1,22 @@
+{
+  "name": "typestub-crawler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "fix": "tslint -p . --fix",
+    "test": "tsc index.d.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crawler": "^1.1.2"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.7",
+    "tslint": "^5.10.0",
+    "tslint-eslint-rules": "^5.2.0",
+    "typescript": "^2.8.3"
+  }
+}
