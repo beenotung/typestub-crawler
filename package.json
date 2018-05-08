@@ -1,13 +1,16 @@
 {
   "name": "typestub-crawler",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "fix": "tslint -p . --fix",
     "test": "tsc index.d.ts"
   },
-  "keywords": [],
+  "keywords": [
+    "typestub",
+    "typescript",
+    "crawler"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -18,5 +21,17 @@
     "tslint": "^5.10.0",
     "tslint-eslint-rules": "^5.2.0",
     "typescript": "^2.8.3"
-  }
+  },
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beenotung/typestub-crawler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/beenotung/typestub-crawler/issues"
+  },
+  "homepage": "https://github.com/beenotung/typestub-crawler#readme",
+  "description": "typestub of crawler"
 }
