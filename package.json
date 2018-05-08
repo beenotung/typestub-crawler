@@ -1,6 +1,6 @@
 {
   "name": "typestub-crawler",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "fix": "tslint -p . --fix",
