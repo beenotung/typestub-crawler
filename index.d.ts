@@ -5,7 +5,20 @@ declare interface CrawlerResult {
     statusCode: number;
     options: {
         uri: string
-        method: "GET" | "POST"
+        method: "GET" | "POST" | string
+        autoWindowClose: boolean,
+        forceUTF8: boolean,
+        gzip: boolean,
+        incomingEncoding: null,
+        jQuery: boolean,
+        priority: number,
+        referer: boolean,
+        retries: number,
+        retryTimeout: number,
+        timeout: number,
+        callback: Function,
+        headers: any,
+        release: Function
     }
 }
 
