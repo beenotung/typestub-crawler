@@ -1,54 +1,9 @@
 export = Crawler
 
-declare interface CrawlerResult {
-    $: CheerioSelector;
-    statusCode: number;
-    options: {
-        uri: string
-        method: "GET" | "POST" | string
-        autoWindowClose: boolean,
-        forceUTF8: boolean,
-        gzip: boolean,
-        incomingEncoding: null,
-        jQuery: boolean,
-        priority: number,
-        referer: boolean,
-        retries: number,
-        retryTimeout: number,
-        timeout: number,
-        callback: Function,
-        headers: any,
-        release: Function
-    }
-}
-
-declare interface CrawlerOptions {
-    callback?: (err, res: CrawlerResult, done: () => void) => void
-    release?: () => void
-
-    autoWindowClose?: boolean,
-    forceUTF8?: boolean,
-    gzip?: boolean,
-    incomingEncoding?: any,
-    jQuery?: boolean,
-    maxConnections?: number,
-    method?: 'GET' | string,
-    priority?: number
-    priorityRange?: number,
-    rateLimit?: number
-    referer?: boolean,
-    retries?: number
-    retryTimeout?: number,
-    timeout?: number,
-    skipDuplicates?: boolean,
-    rotateUA?: boolean,
-    homogeneous?: boolean
-}
-
 declare class Crawler {
-    constructor(params?: CrawlerOptions);
+    constructor(params?: Crawler.CrawlerOptions);
 
-    init(options: CrawlerOptions);
+    init(options: Crawler.CrawlerOptions);
 
     setLimiterProperty(limiter, property, value);
 
@@ -71,4 +26,53 @@ declare class Crawler {
     _doEncoding(options, response);
 
     _parseCharset(res);
+}
+
+declare namespace Crawler {
+
+    export interface CrawlerResult {
+        $: CheerioSelector;
+        statusCode: number;
+        options: {
+            uri: string
+            method: "GET" | "POST" | string
+            autoWindowClose: boolean,
+            forceUTF8: boolean,
+            gzip: boolean,
+            incomingEncoding: null,
+            jQuery: boolean,
+            priority: number,
+            referer: boolean,
+            retries: number,
+            retryTimeout: number,
+            timeout: number,
+            callback: Function,
+            headers: any,
+            release: Function
+        }
+    }
+
+    export interface CrawlerOptions {
+        callback?: (err, res: CrawlerResult, done: () => void) => void
+        release?: () => void
+
+        autoWindowClose?: boolean,
+        forceUTF8?: boolean,
+        gzip?: boolean,
+        incomingEncoding?: any,
+        jQuery?: boolean,
+        maxConnections?: number,
+        method?: 'GET' | string,
+        priority?: number
+        priorityRange?: number,
+        rateLimit?: number
+        referer?: boolean,
+        retries?: number
+        retryTimeout?: number,
+        timeout?: number,
+        skipDuplicates?: boolean,
+        rotateUA?: boolean,
+        homogeneous?: boolean
+    }
+
 }
